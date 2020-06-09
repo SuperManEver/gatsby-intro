@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import usePosts from 'src/hooks/use-posts'
 import PostPreview from 'src/components/post-preview'

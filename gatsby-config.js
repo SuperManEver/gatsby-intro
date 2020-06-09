@@ -8,6 +8,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
@@ -23,12 +25,18 @@ module.exports = {
         },
       },
     },
-
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
         path: 'content/posts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: 'content/images',
       },
     },
   ],

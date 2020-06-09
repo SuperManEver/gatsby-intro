@@ -11,10 +11,14 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.5",
+    "@mdx-js/react": "^1.6.5",
     "gatsby": "^2.23.1",
+    "gatsby-plugin-mdx": "^1.2.14",
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sass": "^2.3.3",
+    "gatsby-source-filesystem": "^2.3.10",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

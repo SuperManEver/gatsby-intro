@@ -15,5 +15,21 @@ module.exports = {
         // pages: path.join(__dirname, 'src/pages'),
       },
     },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout'),
+        },
+      },
+    },
+
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: 'content/posts',
+      },
+    },
   ],
 }

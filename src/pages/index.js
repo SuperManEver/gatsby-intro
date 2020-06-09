@@ -1,18 +1,28 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react'
+import { Link } from 'gatsby'
 
-import Layout from "../components/layout";
+import usePosts from 'src/hooks/use-posts'
+import PostPreview from 'src/components/post-preview'
+import Layout from 'src/components/layout'
+import Hero from 'src/components/hero'
 
-import "./global.css";
+import './global.css'
 
 export default function Index() {
-  return (
-    <Layout>
-      <div>
-        <h1>Home page</h1>
+  const posts = usePosts()
 
-        <Link to="/about">About Me! &rarr;</Link>
-      </div>
-    </Layout>
-  );
+  return (
+    <>
+      <Hero />
+      <Layout>
+        <div>
+          <h2 className="subtitle">Read my blog</h2>
+
+          {posts.map((post) => (
+            <PostPreview key={post.slug} post={post} />
+          ))}
+        </div>
+      </Layout>
+    </>
+  )
 }
